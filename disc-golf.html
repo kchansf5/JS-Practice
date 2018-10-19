@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body id="body">
+    <h1>JS Things</h1>
+  </body>
+  <script type="text/javascript">
+
+    function getDiscs(){
+      setTimeout(()=> {
+        var discs = ["driver", "mid-range", "putter"];
+
+        discs.forEach((disc) => {
+          document.body.innerHTML += `<li>${disc}</li>`
+        });
+      }, 5000);
+    }
+
+    getDiscs();
+  </script>
+</html>
