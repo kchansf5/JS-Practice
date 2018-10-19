@@ -9,18 +9,6 @@
   </body>
   <script type="text/javascript">
 
-    function getDiscs(){
-      setTimeout(()=> {
-        var discs = ["driver", "mid-range", "putter"];
-
-        discs.forEach((disc) => {
-          document.body.innerHTML += `<li>${disc}</li>`
-        });
-      }, 5000);
-    }
-
-    getDiscs();
-
     const currentDiscs = {
       drivers: [
         { name: "Champion Valkyrie", color: "Red", quantity: 1 },
@@ -38,5 +26,21 @@
         { name: "Birdie", color: "Orange", quantity: 2 },
       ]
     }
+
+    function getDiscs(){
+      setTimeout(() => {
+
+        const discTypes = Object.keys(currentDiscs);
+        discTypes.forEach((type) => {
+          currentDiscs[type].forEach((disc) => {
+            document.getElementById("body").innerHTML += `<li>${disc.name}</li>`;
+          });
+        });
+
+      }, 1000);
+    }
+
+    getDiscs();
+
   </script>
 </html>
