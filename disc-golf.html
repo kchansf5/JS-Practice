@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Current Discs</title>
   </head>
   <body id="body">
     <h1>Disc Golf JS Practice</h1>
@@ -33,7 +33,8 @@
         const discTypes = Object.keys(currentDiscs);
         discTypes.forEach((type) => {
           currentDiscs[type].forEach((disc) => {
-            document.getElementById("body").innerHTML += `<li>${disc.name}</li>`;
+            document.getElementById("body").innerHTML +=             `<li>${disc.name}</li>
+              <button class="button-1">View Disc Details</button>`;
           });
         });
 
